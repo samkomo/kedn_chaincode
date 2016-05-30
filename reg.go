@@ -1,3 +1,15 @@
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"github.com/hyperledger/fabric/core/chaincode/shim"
+	// "strconv"
+	// "time"
+	"errors"
+	"strings"
+)
+
 func (t *SimpleChaincode) createSchool(stub *shim.ChaincodeStub, args []string) ([]byte, error) {
 	// obtain the username to associate with school
 	if len(args) != 2 {
